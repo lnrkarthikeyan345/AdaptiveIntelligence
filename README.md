@@ -1,137 +1,235 @@
+# Adaptive Intelligence
+
 ## 🚀 Overview
-Raven Route Optimizer is a web-based intelligent logistics routing system designed to optimize delivery routes under dynamic real-world conditions. The platform leverages real-time environmental and traffic data combined with heuristic-based pathfinding algorithms to generate safer, faster, and more efficient routes.
+Adaptive Intelligence is an intelligent logistics routing and environmental analytics platform designed to optimize delivery and navigation routes using real-time traffic and environmental conditions.
 
-The system enables logistics providers and fleet managers to make informed routing decisions by analyzing multiple factors such as traffic congestion, weather conditions, air quality, and elevation, while visualizing optimized and alternative routes on an interactive map interface.
+The system combines heuristic-based pathfinding algorithms with live data sources such as traffic conditions, weather updates, air quality metrics, and elevation analysis to generate safer, faster, and more efficient routes.
 
-## 🔥 Problem Statement & Our Idea
-
-### Problem Statement
-Logistics and delivery operations frequently suffer from unpredictable delays caused by traffic congestion, sudden weather changes, poor air quality, and challenging terrain. Traditional routing systems rely on static or distance-only optimization, failing to adapt to real-time conditions and compromising delivery efficiency, fuel costs, and driver safety.
-
-### Our Idea
-Raven Route Optimizer addresses these challenges by introducing an intelligent, real-time routing system that:
-
-- Dynamically adjusts routes using live traffic, weather, air quality, and elevation data
-- Applies multi-factor analysis instead of distance-only optimization
-- Supports dynamic rerouting when environmental or traffic conditions change
-- Provides transparent and interactive route visualization for better decision-making
-
-The goal is to transform route planning from static navigation into adaptive, data-driven logistics optimization.
-
-## 💡 Challenges Faced
-
-### Real-Time Data Integration
-- Fetching live data from multiple external APIs without exceeding rate limits
-- Synchronizing traffic, weather, air quality, and elevation data with different update frequencies
-- Handling missing or inconsistent data in regions with limited coverage
-
-### Route Optimization Logic
-- Designing a balanced cost function for the A* algorithm that fairly weighs traffic, weather, AQI, and elevation
-- Avoiding over-penalization of any single constraint
-- Ensuring real-time performance while recalculating routes dynamically
-
-### Frontend Visualization
-- Smoothly rendering optimized and alternative routes on a Leaflet-based map
-- Displaying detailed route metrics such as distance, duration, AQI, weather impact, and elevation gain
-- Maintaining responsiveness and usability across devices during real-time updates
-
-## 🏗️ Architecture
-
-The Raven Route Optimizer follows a modular, layered architecture:
-
-### 1. Data Acquisition Layer
-- Fetches real-time traffic, weather, air quality, and elevation data using external APIs
-- Handles API failures and fallback scenarios
-
-### 2. Route Optimization Layer
-- Applies a heuristic-based A* algorithm for pathfinding
-- Balances multiple real-world constraints within the cost function
-- Supports dynamic route recalculation based on changing conditions
-
-### 3. Application Layer
-- Backend APIs expose optimized route data
-- Frontend consumes route data and renders it interactively
-
-### 4. Visualization Layer
-- Displays routes on an interactive Leaflet map
-- Presents detailed metrics and alternative route options
-
-## 🌍 Route Optimization Flow
-
-### Implementation Steps
-1. Fetch real-time traffic, weather, air quality, and elevation data
-2. Compute heuristic scores for each route segment
-3. Optimize routes using a multi-factor A* algorithm
-4. Dynamically reroute when significant changes are detected
-5. Visualize optimized and alternative routes with detailed metrics
-
-### Project Phases
-- Phase 1: Real-Time Data Collection 📡
-- Phase 2: Route Optimization using A* 🛤️
-- Phase 3: Dynamic Rerouting 🔄
-- Phase 4: Interactive Visualization 🗺️
-
-## ▶️ How to Run the Project in VS Code
-
-### Prerequisites
-- Node.js (v16+)
-- Python 3.9+
-- npm
-- Git
-- VS Code
-
-### Clone the Repository
-```bash
-git clone https://github.com/VishalS-14/Raven-Route-Optimizer.git
-cd Raven-Route-Optimizer
-```
-
-### Backend setup
-cd backend
-pip install -r requirements.txt
-python app.py
-
-### Frontend setup
-cd frontend
-npm install
-npm start
-
+The platform enables logistics providers and fleet managers to make adaptive routing decisions through interactive route visualization and multi-factor route optimization.
 
 ---
 
-## 🔹 Tech Stack Used
+# 🔥 Problem Statement & Solution
 
-## 🛠️ Tech Stack Used
+## Problem Statement
+Modern logistics and delivery systems often face delays caused by traffic congestion, weather changes, poor air quality, and difficult terrain conditions. Traditional routing systems mainly focus on shortest-distance navigation and fail to adapt dynamically to real-world environmental conditions.
 
-### Frontend
+## Solution
+Adaptive Intelligence addresses these challenges by providing:
+
+- Dynamic route optimization using real-time environmental data
+- Multi-factor route analysis instead of distance-only optimization
+- Interactive route visualization
+- Dynamic rerouting support
+- Improved delivery efficiency and route planning
+
+The project transforms static route planning into adaptive and data-driven logistics optimization.
+
+---
+
+# 💡 Challenges Faced
+
+## Real-Time Data Integration
+- Integrating multiple external APIs efficiently
+- Managing API rate limits and fallback handling
+- Synchronizing traffic and environmental data updates
+
+## Route Optimization Logic
+- Designing balanced heuristic cost calculations
+- Combining traffic, AQI, weather, and elevation factors
+- Maintaining fast rerouting performance
+
+## Frontend Visualization
+- Rendering optimized routes dynamically
+- Displaying route metrics interactively
+- Ensuring responsive UI performance
+
+---
+
+# 🏗️ System Architecture
+
+Adaptive Intelligence follows a modular layered architecture:
+
+## 1. Data Acquisition Layer
+- Fetches traffic, weather, AQI, and elevation data
+- Handles API synchronization and failures
+
+## 2. Route Optimization Layer
+- Uses heuristic-based A* pathfinding
+- Applies multi-factor route evaluation
+- Supports dynamic route recalculation
+
+## 3. Backend Layer
+- Exposes optimized route APIs
+- Handles route computation and processing
+
+## 4. Visualization Layer
+- Displays routes using Leaflet.js
+- Shows route analytics and alternative routes
+
+---
+
+# 🌍 Route Optimization Workflow
+
+## Implementation Steps
+1. Fetch real-time traffic and environmental data
+2. Analyze route segment conditions
+3. Apply A* heuristic optimization
+4. Dynamically reroute when conditions change
+5. Visualize optimized and alternative routes
+
+## Development Phases
+- Phase 1: Real-Time Data Collection 📡
+- Phase 2: Route Optimization 🛤️
+- Phase 3: Dynamic Rerouting 🔄
+- Phase 4: Interactive Visualization 🗺️
+
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
 - React.js
 - JavaScript (ES6+)
 - Leaflet.js
-- leaflet-routing-machine
 - HTML5 & CSS3
 
-### Backend
+## Backend
 - Python
 - Flask
-- RESTful APIs
+- REST APIs
 
-### Algorithms & Data Processing
-- Heuristic-based A* Pathfinding Algorithm
-- Multi-factor route cost evaluation
+## Algorithms
+- A* Pathfinding Algorithm
+- Multi-factor Route Evaluation
 
-### External APIs
+## APIs Used
 - Google Maps API
 - Google Air Quality API
 - Google Elevation API
 - WeatherAPI
 
-### Tools & Platforms
+## Tools & Platforms
 - Git & GitHub
 - VS Code
 - npm & pip
 
-## 🧾 Conclusion
-Raven Route Optimizer demonstrates how intelligent routing systems can be built by combining real-time environmental data with classical pathfinding algorithms. By moving beyond static distance-based navigation, the project delivers adaptive, safer, and more efficient logistics routing.
+---
 
-The system lays a strong foundation for future enhancements such as predictive traffic modeling, machine learning-based route scoring, and cloud-based deployment for large-scale fleet management.
+# ▶️ Installation & Setup
 
+## Prerequisites
+Before running the project, ensure you have:
+
+- Node.js (v16+)
+- Python 3.9+
+- npm
+- Git
+
+---
+
+## Clone Repository
+
+```bash
+git clone https://github.com/lnrkarthikeyan345/AdaptiveIntelligence.git
+cd AdaptiveIntelligence
+```
+
+---
+
+# ⚙️ Backend Setup
+
+Navigate to backend folder:
+
+```bash
+cd backend
+```
+
+Install required Python packages:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run backend server:
+
+```bash
+python app.py
+```
+
+---
+
+# 💻 Frontend Setup
+
+Navigate to frontend folder:
+
+```bash
+cd frontend
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start frontend server:
+
+```bash
+npm start
+```
+
+---
+
+# ✨ Features
+
+- Real-time route optimization
+- Dynamic rerouting support
+- Traffic-aware navigation
+- Weather-aware route analysis
+- Air Quality Index (AQI) monitoring
+- Elevation-based route analysis
+- Interactive route visualization
+- Multi-factor pathfinding algorithm
+
+---
+
+# 📊 Route Optimization Factors
+
+The route optimization engine evaluates:
+
+- Traffic congestion
+- Weather conditions
+- Air quality metrics
+- Elevation changes
+- Route distance
+- Estimated travel duration
+
+These parameters are combined using a heuristic-based scoring mechanism to determine optimal routes.
+
+---
+
+# 🧾 Conclusion
+
+Adaptive Intelligence demonstrates how real-time environmental analytics and heuristic pathfinding algorithms can be combined to build smarter logistics routing systems.
+
+By moving beyond static shortest-path navigation, the platform delivers adaptive, safer, and more efficient route optimization suitable for modern logistics and mobility applications.
+
+---
+
+# 🔮 Future Enhancements
+
+- Machine learning-based traffic prediction
+- Cloud deployment support
+- Fleet management dashboard
+- Mobile application integration
+- Predictive analytics for route optimization
+- Advanced route scoring mechanisms
+
+---
+
+# 👨‍💻 Author
+
+Karthikeyan L N R
+
+```
