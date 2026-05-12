@@ -232,7 +232,7 @@ The platform is designed with scalability and modularity in mind for future logi
 ---
 # Screenshots
 
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](screenshots/Adaptive.jpeg)
 # 👨‍💻 Author
 
 Karthikeyan L N R
