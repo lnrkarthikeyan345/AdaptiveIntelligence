@@ -230,7 +230,9 @@ The platform is designed with scalability and modularity in mind for future logi
 - Advanced route scoring mechanisms
 
 ---
+# Screenshots
 
+![Dashboard](screenshots/dashboard.png)
 # 👨‍💻 Author
 
 Karthikeyan L N R
